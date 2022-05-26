@@ -98,6 +98,13 @@ public:
     eRISCVSubType_riscv64,
   };
 
+  /// RISC-V specific flags
+  enum RISCVflags {
+    eRISCV_arch_c = 0x00000001, /// ISA C extension (compressed instructions)
+    eRISCV_abi_f = 0x00000010,  /// Single-precision hard-float ABI
+    eRISCV_abi_d = 0x00000020   /// Double-precision hard-float ABI
+  };
+
   enum Core {
     eCore_arm_generic,
     eCore_arm_armv4,
