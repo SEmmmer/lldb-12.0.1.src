@@ -133,6 +133,7 @@ function(add_lldb_library name)
 
   # Add in any extra C++ compilation flags for this library.
   target_compile_options(${name} PRIVATE ${PARAM_EXTRA_CXXFLAGS})
+  target_link_libraries(${name} PRIVATE atomic)
 
   if(PARAM_PLUGIN)
     get_property(parent_dir DIRECTORY PROPERTY PARENT_DIRECTORY)
